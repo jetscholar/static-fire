@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8"/>
+	<meta name="description" content="A website that facilitates group study"/>
+	<meta name="keyword" content="tutor, mentor, scholar, student, group, study, 
+	            mastermind, peer group, video conference, learn, high school, undergraduate, WebRTC, HTML5, JavaScript"/>
+	<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+    <meta name="robots" content="index, follow"/>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="//load.sumome.com/" data-sumo-site-id="b747528c4d5523ff39c4b84216af957ab54b5402e0dd5cee8fbe4cc85b39771c" async="async"></script>
+    <!--<script type="text/javascript" src="js/jquery.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="css/main.css"/> 
+  	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dancing+Script" />
+    <link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+	<!-- <link rel="icon" href="favicon.ico"/> -->
+
+	<base target='_blank'>
+
+    <title>jetScholar</title>
+    
+</head>
+<body>
+
+<div id="nav">
+    <a href="https://www.jetscholar.com">
+        <img src="images/jetScholar_logo.png" class="logo"/>
+    </a>
+    <a href="logout.php" class="nav_links">Sign Out</a>      
+    <a href="help.php" class="nav_links">Help</a>
+    <a href="profile.php?user=<?php echo $user->data()->firstname;?>" id="mastermind_link"><?php echo $user->data()->firstname; ?></a>
+</div>
+<div id="dashboard_container">
+	
+	
+		<h1>Viewport</h1>
+		
+		  <div id="videos">
+		    <video id="localVideo" width="320" height="240" controls autoplay muted></video>
+		    <video id="remoteVideo" width="320" height="240" controls autoplay></video>
+		  </div>
+		  <div>
+		    <button id="startButton">Start</button>
+		    <button id="callButton">Call</button>
+		    <button id="hangupButton">Hang Up</button>
+		  </div>
+		<form name ="subscribe" id="subscribe_frm" action="#">
+ 
+			Room Name: <input type="text" name="roomName" id="room_name" />
+			<input type="button" name="submit" value="Submit"
+			onclick="processFormData();" />
+			 
+		</form>
+			  
+		
+	
+
+</div>
+<footer class="footer">
+	<section class="links">
+		<div class="grid">
+		 	<div class"col span">
+			 	<ul>
+			 		<li class="col1">Using jetScholar</li>
+			 			<li>
+			 				<a href="#">Help</a>
+			 			</li>
+			 			<li>
+			 				<a href="#">Privacy Policy</a>
+			 			</li>
+			 			<li>
+			 				<a href="#">Security</a>
+			 			</li>
+			 			<li>
+			 				<a href="#">Terms and Conditions</a>
+			 			</li>
+			 			
+			 	</ul>
+			 	
+			</div>
+			
+		</div>
+		
+	</section>	
+</footer>
+</body>
+</html>
+
+
+
+<script src='/socket.io/socket.io.js'></script>
+<script src='js/lib/adapter.js'></script>
+<script src='js/main.js'></script>
+
+</body>
+</html>

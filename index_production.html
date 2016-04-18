@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8"/>
+	<meta name="description" content="A website that facilitates group study"/>
+	<meta name="keyword" content="tutor, mentor, scholar, student, group, study, 
+	            mastermind, peer group, video conference, learn, high school, undergraduate, WebRTC, HTML5, JavaScript"/>
+	<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+    <meta name="robots" content="index, follow"/>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/> -->
+    <link rel="stylesheet" type="text/css" href="css/view.css"/>
+  	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dancing+Script" />
+    <link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+	<!-- <link rel="icon" href="favicon.ico"/> -->
+
+	<base target='_blank'>
+
+    <title>jetScholar</title>
+</head>
+<body>
+
+<div id="nav">
+    <a href="https://www.jetscholar.com">
+        <img src="images/jetScholar_logo.png" class="logo"/>
+    </a>
+    <a href="logout.php" class="nav_links">Sign Out</a>      
+    <a href="help.php" class="nav_links">Help</a>
+    <!--<a href="profile.php?user=<?php //echo $user->data()->firstname;?>" id="mastermind_link"><?php //echo $user->data()->firstname; ?></a> -->
+</div>
+<div id="view_container">
+    <div id="videos">
+        <div id="hotseat">
+            <video id="localVideo" controls autoplay muted></video>
+        </div>
+        <div id="desktop">
+            
+        </div>
+        <div id="seat1">
+            <video id="remoteVideo" controls autoplay></video>
+        </div>
+        <!--<div id="seat2">
+            <video id="remoteVideo2" controls autoplay></video>
+        </div>
+        <div id="seat3">
+            <video id="remoteVideo3" controls autoplay></video>
+        </div>
+        <div id="seat4">
+            <video id="remoteVideo4" controls autoplay></video>
+        </div> -->
+    </div>
+
+</div>
+
+<footer class="footer">
+    <section class="links">
+        <div class="grid">
+            <div class"col span">
+                <ul>
+                    <li class="col1">Using jetScholar</li>
+                        <li>
+                            <a href="#">Help</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Security</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms and Conditions</a>
+                        </li>
+                        
+                </ul>
+                
+            </div>
+            
+        </div>
+        
+    </section>  
+</footer>
+</body>
+</html>

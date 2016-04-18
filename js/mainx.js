@@ -18,14 +18,16 @@ var sdpConstraints = {'mandatory': {
   'OfferToReceiveVideo':true }};
 
 /////////////////////////////////////////////
-
-var room = location.pathname.substring(1);
+var room = location.pathname.substring(1); //gets last part of URL
 if (room === '') {
   room = prompt('Enter room name:');
   //room = 'foo';
 } else {
-  //
-}
+  //room = 'foo';
+} 
+
+////////////////////////////////////////////
+
 
 var socket = io.connect();
 
@@ -256,7 +258,7 @@ function stop() {
 // Set Opus as the default audio codec if it's present.
 function preferOpus(sdp) {
   var sdpLines = sdp.split('\r\n');
-  var mLineIndex = null;
+  var mLineIndex;
   // Search for m line.
   for (var i = 0; i < sdpLines.length; i++) {
       if (sdpLines[i].search('m=audio') !== -1) {
@@ -327,3 +329,4 @@ function removeCN(sdpLines, mLineIndex) {
   sdpLines[mLineIndex] = mLineElements.join(' ');
   return sdpLines;
 }
+
